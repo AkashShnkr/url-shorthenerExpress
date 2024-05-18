@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%- include('../arepeated/link'); %>
+</head>
+
+<body>
+
+  <header>
+    <%- include('../arepeated/head'); %>
+  </header>
+  <% if(locals.id) {%>
+    <p>URL Generated:<a> https://localhost:8000/URL/<% id %></a></p>
+    <% } %>
+  <H4>URL SHORTHENER</H4>
+  <div>
+    <form method='' action="post">
+      <label> Enter the Original URL</label>
+      <input type="text" name="url" placeholder="https://example/com">
+      <button type="sumbit">Generate</button>
+    </form>
+  </div>
+</body>
+
+</html>
